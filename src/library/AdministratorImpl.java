@@ -20,6 +20,6 @@ public class AdministratorImpl extends User implements Administrator{
     }
 
     @Override
-    public void overdueNotification(ReaderImpl reader) {
+    public void overdueNotification(Reader reader) {
     }
 }

@@ -1,8 +1,9 @@
 package library;
 
-public class Person extends User implements Supplier, Reader{
-    Person(String name) {
+public class SuplierAndReader extends User implements Supplier, Reader{
+    SuplierAndReader(String name) {
         super(name);
+        System.out.println("Пользователь(поставщик-читатель) создан");
     }
 
     @Override
@@ -17,6 +18,6 @@ public class Person extends User implements Supplier, Reader{
 
     @Override
     public void bring(String book) {
-        System.out.println("Поставщик " + this.getName() + " принес книгу '" + book + "'");
+        System.out.println("Поставщик " + this.getName() + " доставил книгу '" + book + "'");
     }
 }

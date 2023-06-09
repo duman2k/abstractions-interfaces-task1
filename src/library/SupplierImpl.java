@@ -7,6 +7,6 @@ public class SupplierImpl extends User implements Supplier{
 
     @Override
     public void bring(String book) {
-        System.out.println("Поставщик " + this.getName() + "принес книгу '" + book + "'");
+        System.out.println("Поставщик " + this.getName() + "доставил книгу '" + book + "'");
     }
 }

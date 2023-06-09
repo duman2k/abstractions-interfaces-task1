@@ -6,19 +6,25 @@ public class Test {
         LibrarianImpl librarian = new LibrarianImpl("Максат");
         ReaderImpl reader = new ReaderImpl("Айдын");
         SupplierImpl supplier = new SupplierImpl("Игорь");
+        AdministratorAndLibrarian administratorNLibrarian = new AdministratorAndLibrarian("Боб");
 
         admin.lend(reader, "Алгебра");
         reader.borrow(admin, "Над пропастью во ржи");
         librarian.order(supplier);
 
+
         System.out.println();
-        Person supplierNReader = new Person("Вася");
+        SuplierAndReader supplierNReader = new SuplierAndReader("Вася");
         supplierNReader.bring("Физика");
 
         supplierNReader.borrow(admin, "Музыка");
         supplierNReader.returnABook("Музыка");
 
         librarian.order(supplierNReader);
+
+        administratorNLibrarian.overdueNotification(supplierNReader);
+
+
 
 
     }
